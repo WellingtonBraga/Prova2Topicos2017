@@ -3,6 +3,7 @@ package br.edu.univas.si8.ta.shopping.ejb.entities;
 import java.sql.Timestamp;
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -21,6 +22,7 @@ public class Order {
 	
 	private String description;
 	
+	@Column(name="order_time")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date orderTime;
 
