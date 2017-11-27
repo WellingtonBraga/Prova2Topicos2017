@@ -7,16 +7,16 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-@Path("/rest")
-public interface ClientService {
+@Path("/order")
+public interface OrderService {
 	
 	@GET
-	@Path("/order/all")
+	@Path("/all")
 	@Produces(MediaType.APPLICATION_JSON)
 	String[] listOrders();
 
 	@POST
-	@Path("/order/add")
+	@Path("/add")
 	@Produces(MediaType.APPLICATION_JSON)
 	String addOrder(@FormParam("description") String description);
 }

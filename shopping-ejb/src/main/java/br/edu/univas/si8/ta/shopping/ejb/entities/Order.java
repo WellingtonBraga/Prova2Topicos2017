@@ -1,7 +1,7 @@
 package br.edu.univas.si8.ta.shopping.ejb.entities;
 
 import java.sql.Timestamp;
-import java.sql.Date;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,7 +13,7 @@ import javax.persistence.TemporalType;
 
 @Entity(name = "shopping_order")
 @SequenceGenerator(name = "seq_shopping_order", sequenceName = "seq_shopping_order", allocationSize = 1)
-public class Client {
+public class Order {
 	
 	@Id
 	@GeneratedValue(generator = "seq_shopping_order", strategy = GenerationType.SEQUENCE)

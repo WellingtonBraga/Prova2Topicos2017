@@ -6,19 +6,19 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import br.edu.univas.si8.ta.shopping.ejb.entities.Client;
+import br.edu.univas.si8.ta.shopping.ejb.entities.Order;
 
 @Stateless
-public class ClientDAO {
+public class OrderDAO {
 	
 	@PersistenceContext(unitName = "shopping_order")
 	private EntityManager em;
 
-	public void insert(Client client) {
+	public void insert(Order client) {
 		em.persist(client);
 	}
 
-	public List<Client> listAll() {
-		return em.createQuery("from shopping_order p", Client.class).getResultList();
+	public List<Order> listAll() {
+		return em.createQuery("from shopping_order p", Order.class).getResultList();
 	}
 }
